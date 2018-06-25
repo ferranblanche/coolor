@@ -57,9 +57,10 @@
     padding-bottom: 100%;
 }
 .color--label {
+    width: 100%;
     position: absolute;
-    bottom:0;
-    padding: 1rem;
+    bottom: 0;
+    padding: 1rem 0;
     color: white;
     text-align: center;
     font-weight: bold;

@@ -2,10 +2,10 @@
   "name": "coolor",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "inde.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Ferran Blanché",
   "license": "ISC"
 }

@@ -8,7 +8,8 @@ function generateStatus() {
     type == 'color' &&  getColor();
     type == 'gradient' &&  getGradient();
     $('#btn-back').removeClass('btn__secondary-disabled');
-}
+};
+
 function changeStatus(newType) {
     if(type != newType) {
         switch (newType) {
@@ -23,9 +24,9 @@ function changeStatus(newType) {
                 $('#nav-gradient').addClass('nav--item__selected');
                 $('#nav-color').removeClass('nav--item__selected');
                 break;
-        }
-    }
-}
+        };
+    };
+};
 
 // GET
 function getColor() {
@@ -34,24 +35,26 @@ function getColor() {
     current = color;
     setStatus();
     return color;
-}
+};
+
 function getGradient() {
     var gradient = randomGradient();
     type = 'gradient';
     current = gradient;
     setStatus();
     return gradient;
-}
+};
 
 // SET
 function setStatus() {
     $('.color--container').css("background", current);
-}
+    $('.color--label').text(current);
+};
 
 // STORE
 function storeCurrent() {
     previous.push(current);
-}
+};
 
 // UNDO
 function undoStatus() {
@@ -60,7 +63,7 @@ function undoStatus() {
         setStatus();
         previous[0] || $('#btn-back').addClass('btn__secondary-disabled');
     };
-}
+};
 
 // Generate random color
 function randomColor() {
@@ -68,9 +71,10 @@ function randomColor() {
     var color = '#';
     for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
-    }
+    };
     return color;
-}
+};
+
 // Generate random gradient
 function randomGradient() {
     var color1 = randomColor();
@@ -78,4 +82,4 @@ function randomGradient() {
     var direction = -45;
     var gradient = `linear-gradient(${direction}deg, ${color1}, ${color2})`;
     return gradient;
-}
+};
