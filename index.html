@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>coolors</title>
+</head>
+<body>
+    <div class="section--container">
+        <div class="widget--container">
+                <nav class="nav--container">
+                    <div id="nav-color" class="nav--item nav--item__selected" onclick="changeStatus('color')">Color</div>
+                    <div id="nav-gradient" class="nav--item" onclick="changeStatus('gradient')">Gradient</div>
+                </nav>
+                <div class="color--container">
+                    <div class="color--label">#e30054</div>
+                </div>
+                <div class="action--container">
+                    <div class="btn btn__primary" onclick="generateStatus()">Generate</div>
+                    <div class="action--row">
+                        <div id="btn-back" class="btn btn__secondary btn__secondary-disabled" onclick="undoStatus()">Back</div>
+                        <div id="btn-copy" class="btn btn__secondary btn__secondary-disabled">Copy (soon)</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
